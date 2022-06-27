@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/ico.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/sass/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <title>Apple History - Home</title>
+  </head>
+  <body>
+    <div class="container-fluid fixed-top bg-light">
+      <header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+          <span class="fs-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-apple" viewBox="0 0 16 16">
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z" />
+              <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282z" />
+            </svg> AppleHistory </span>
+        </a>
+        <ul>
+          <button type="button" class="btn btn-primary btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"> come effetuare le operazioni </button>
+        </ul>
+      </header>
+    </div>
+    <section id="iphone" class="bgphone">
+      <div id="absolute1">
+        <h2>iPhone X</h2>
+        <p>Apple iPhone X è un smartphone iOS di buon livello, fortemente votato all'imaging, in grado di soddisfare anche l'utente più esigente. Dispone di un enorme display Touchscreen da 5.8 pollici con una risoluzione di 2436x1125 pixel. Sul versante delle funzionalità a questo Apple iPhone X non manca davvero nulla. A cominciare dal modulo LTE 4G che permette un trasferimento dati e una navigazione in internet eccellente, passando per la connettività Wi-fi e il GPS.</p>
+      </div>
+      <div id="phone">
+        <div id="wrapper">
+          <span id="calliphone">
+            <p id="screeniphone"></p>
+            <div class="key" onclick="iphone.digitNumber('1')">1</div>
+            <div class="key" onclick="iphone.digitNumber('2')">2 <span>abc</span>
+            </div>
+            <div class="key" onclick="iphone.digitNumber('3')">3 <span>def</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphone.digitNumber('4')">4 <span>ghi</span>
+            </div>
+            <div class="key" onclick="iphone.digitNumber('5')">5 <span>jkl</span>
+            </div>
+            <div class="key" onclick="iphone.digitNumber('6')">6 <span>mno</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphone.digitNumber('7')">7 <span>pqrs</span>
+            </div>
+            <div class="key" onclick="iphone.digitNumber('8')">8 <span>tuv</span>
+            </div>
+            <div class="key" onclick="iphone.digitNumber('9')">9 <span>wxyz</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key special">*</div>
+            <div class="key" onclick="iphone.digitNumber('0')">0 <span>oper</span>
+            </div>
+            <div class="key special" onclick="iphone.digitNumber('#')">#</div>
+            <div class="clear"></div>
+            <div class="key nb" onclick="iphone.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+              </svg>
+            </div>
+            <div class="key phone" id="chiama" onclick="iphone.call(iphone.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+            <div class="key nb" onclick="iphone.erasenumer()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
+              </svg>
+            </div>
+          </span>
+          <div id="registeriphone" class="displaynone">
+            <button class="btn btn-dark" onclick="iphone.resetregistro()">Reset Chiamate</button>
+            <div id="chiamatesiphone"></div>
+            <div class="key phoneout" id="chiama" onclick="iphone.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z" />
+              </svg>
+            </div>
+          </div>
+          <span id="calloniphone" class="displaynone">
+            <p id="numchiamatoiphone"></p>
+            <div class="flex">
+              <p id="oraiphone" class="displaynone"></p>
+              <p id="timeriphone">0:0</p>
+            </div>
+            <p>chiamata in corso</p>
+            <div class="key phoneout" id="chiama" onclick="iphone.chiudi(1,iphone.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section id="iphoneb" class="bgphone ">
+      <div id="absolute2">
+        <h2>iPhone 8</h2>
+        <p>L'iPhone 8 appartiene all'undicesima generazione di smartphone sviluppati in casa Apple, presentati per la prima volta nell’ormai lontano 2017. È l'ultimo dispositivo della famiglia di iPhone a vedere il tasto Home e il Touch ID prima di passare all’attuale Face ID.</p>
+      </div>
+      <div id="phone2">
+        <div id="wrapper2">
+          <span id="calliphoneb">
+            <p id="screeniphoneb"></p>
+            <div class="key" onclick="iphoneb.digitNumber('1')">1</div>
+            <div class="key" onclick="iphoneb.digitNumber('2')">2 <span>abc</span>
+            </div>
+            <div class="key" onclick="iphoneb.digitNumber('3')">3 <span>def</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphoneb.digitNumber('4')">4 <span>ghi</span>
+            </div>
+            <div class="key" onclick="iphoneb.digitNumber('5')">5 <span>jkl</span>
+            </div>
+            <div class="key" onclick="iphoneb.digitNumber('6')">6 <span>mno</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphoneb.digitNumber('7')">7 <span>pqrs</span>
+            </div>
+            <div class="key" onclick="iphoneb.digitNumber('8')">8 <span>tuv</span>
+            </div>
+            <div class="key" onclick="iphoneb.digitNumber('9')">9 <span>wxyz</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key special">*</div>
+            <div class="key" onclick="iphoneb.digitNumber('0')">0 <span>oper</span>
+            </div>
+            <div class="key special" onclick="iphoneb.digitNumber('#')">#</div>
+            <div class="clear"></div>
+            <div class="key nb" onclick="iphoneb.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+              </svg>
+            </div>
+            <div class="key phone" id="chiama" onclick="iphoneb.call(iphoneb.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+            <div class="key nb" onclick="iphoneb.erasenumer()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
+              </svg>
+            </div>
+          </span>
+          <div id="registeriphoneb" class="displaynone">
+            <button class="btn btn-dark" onclick="iphoneb.resetregistro()">Reset Chiamate</button>
+            <div id="chiamatesiphoneb"></div>
+            <div class="key phoneout" id="chiama" onclick="iphoneb.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z" />
+              </svg>
+            </div>
+          </div>
+          <span id="calloniphoneb" class="displaynone">
+            <p id="numchiamatoiphoneb"></p>
+            <div class="flex">
+              <p id="oraiphoneb" class="displaynone"></p>
+              <p id="timeriphoneb">0:0</p>
+            </div>
+            <p>chiamata in corso</p>
+            <div class="key phoneout" id="chiama" onclick="iphoneb.chiudi(1,iphoneb.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+    <section id="iphonec" class="bgphone ">
+      <div id="absolute3">
+        <h2>iPhone 5</h2>
+        <p>è uno smartphone Apple con iOS 12.5.3 lanciato nel 2012, con fotocamera posteriore da 8 MP e anteriore da 1.2 MP. Il display Retina ha un'ampiezza di 4.0 pollici con una risoluzione di 640 x 1136 punti. i-Phone 5 monta una batteria da 1440mAh e 225 ore di standby o 640 minuti di conversazione, adotta una memoria di 1GB RAM + 16GB e dispone di una CPU Apple A6.</p>
+      </div>
+      <div id="phone3">
+        <div id="wrapper2">
+          <span id="calliphonec">
+            <p id="screeniphonec"></p>
+            <div class="key" onclick="iphonec.digitNumber('1')">1</div>
+            <div class="key" onclick="iphonec.digitNumber('2')">2 <span>abc</span>
+            </div>
+            <div class="key" onclick="iphonec.digitNumber('3')">3 <span>def</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphonec.digitNumber('4')">4 <span>ghi</span>
+            </div>
+            <div class="key" onclick="iphonec.digitNumber('5')">5 <span>jkl</span>
+            </div>
+            <div class="key" onclick="iphonec.digitNumber('6')">6 <span>mno</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key" onclick="iphonec.digitNumber('7')">7 <span>pqrs</span>
+            </div>
+            <div class="key" onclick="iphonec.digitNumber('8')">8 <span>tuv</span>
+            </div>
+            <div class="key" onclick="iphonec.digitNumber('9')">9 <span>wxyz</span>
+            </div>
+            <div class="clear"></div>
+            <div class="key special">*</div>
+            <div class="key" onclick="iphonec.digitNumber('0')">0 <span>oper</span>
+            </div>
+            <div class="key special" onclick="iphonec.digitNumber('#')">#</div>
+            <div class="clear"></div>
+            <div class="key nb" onclick="iphonec.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-telephone-outbound-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+              </svg>
+            </div>
+            <div class="key phone" id="chiama" onclick="iphonec.call(iphonec.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+            <div class="key nb" onclick="iphonec.erasenumer()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="56" fill="currentColor" class="bi bi-backspace-fill" viewBox="0 0 16 16">
+                <path d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
+              </svg>
+            </div>
+          </span>
+          <div id="registeriphonec" class="displaynone">
+            <button class="btn btn-dark" onclick="iphonec.resetregistro()">Reset Chiamate</button>
+            <div id="chiamatesiphonec"></div>
+            <div class="key phoneout" id="chiama" onclick="iphonec.registro()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z" />
+              </svg>
+            </div>
+          </div>
+          <span id="calloniphonec" class="displaynone">
+            <p id="numchiamatoiphonec"></p>
+            <div class="flex">
+              <p id="oraiphonec" class="displaynone"></p>
+              <p id="timeriphonec">0:0</p>
+            </div>
+            <p>chiamata in corso</p>
+            <div class="key phoneout" id="chiama" onclick="iphonec.chiudi(1,iphonec.numerodigitato)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="56" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg>
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Numeri</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h5>#1, #10 , #20</h5>
+            <br>
+            <p>Effettua una Ricarica </p>
+            <hr>
+            <h5>404</h5>
+            <br>
+            <p>Visualizza il credito residuo </p>
+            <hr>
+            <h5>100</h5>
+            <br>
+            <p>visualizza la tariffa al minuto </p>
+            <hr>
+            <p>Scatto alla risposta equivalente alla tariffa al minuto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
