@@ -21,7 +21,15 @@ var Smartphone = /** @class */ (function () {
         var ora = document.getElementById("ora" + modello);
         if (!ora)
             throw Error("Errore: non riesco a trovare ora!");
+        var call = document.getElementById("call" + modello);
+        if (!call)
+            throw Error("Errore: non riesco a trovare call!");
+        var callon = document.getElementById("callon" + modello);
+        if (!callon)
+            throw Error("Errore: non riesco a trovare callon!");
         this.timers = timer;
+        this.callo = call;
+        this.callons = callon;
         this.oras = ora;
         this.schermo = screen;
         this.callschermo = callscreen;
@@ -52,9 +60,8 @@ var Smartphone = /** @class */ (function () {
         this.numeroDigitato = this.numeroDigitato.slice(0, -1);
     };
     Smartphone.prototype.registro = function () {
-        var call = document.getElementById("call" + this.modello);
         var register = document.getElementById("register" + this.modello);
-        call.classList.toggle("displaynone");
+        this.callo.classList.toggle("displaynone");
         register.classList.toggle("displaynone");
     };
     Smartphone.prototype.resetregistro = function () {
@@ -110,10 +117,8 @@ var Smartphone = /** @class */ (function () {
                 else {
                     this.callschermo.innerText = "+" + this.numeroDigitato;
                 }
-                var call = document.getElementById("call" + this.modello);
-                var callon = document.getElementById("callon" + this.modello);
-                call.classList.add("displaynone");
-                callon.classList.remove("displaynone");
+                this.callo.classList.add("displaynone");
+                this.callons.classList.remove("displaynone");
                 var salv = this.numeroDigitato;
                 this.timer(salv);
         }
@@ -146,8 +151,7 @@ var Smartphone = /** @class */ (function () {
                 _this.oras.innerText = _this.ore + ":";
             }
             if (_this.ore == 1) {
-                var ore = document.getElementById("ora" + _this.modello);
-                ore.classList.remove("displaynone");
+                _this.oras.classList.remove("displaynone");
             }
             if (_this.credito <= 0 && _this.scatto == false) {
                 _this.credito = 0;
@@ -158,10 +162,8 @@ var Smartphone = /** @class */ (function () {
         }, 1000);
     };
     Smartphone.prototype.chiudi = function () {
-        var callon = document.getElementById("callon" + this.modello);
-        callon.classList.add("displaynone");
-        var call = document.getElementById("call" + this.modello);
-        call.classList.remove("displaynone");
+        this.callons.classList.add("displaynone");
+        this.callo.classList.remove("displaynone");
         clearInterval(this.interval);
         this.chiamate.push({
             numero: this.numeroDigitato,

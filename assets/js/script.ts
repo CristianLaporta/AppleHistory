@@ -14,6 +14,8 @@ interface Chiamata {
   class Smartphone implements ISmartphone {
     public modello: string;
     public schermo: HTMLElement;
+    public callo: HTMLElement;
+    public callons: HTMLElement;
     public callschermo: HTMLElement;
     public ultimechiam: HTMLElement;
     public timers: HTMLElement;
@@ -49,7 +51,13 @@ interface Chiamata {
       if (!timer) throw Error("Errore: non riesco a trovare timer!");
       let ora = document.getElementById("ora" + modello);
       if (!ora) throw Error("Errore: non riesco a trovare ora!");
+      let call = document.getElementById("call" + modello);
+      if (!call) throw Error("Errore: non riesco a trovare call!");
+      let callon = document.getElementById("callon" + modello);
+      if (!callon) throw Error("Errore: non riesco a trovare callon!");
       this.timers = timer;
+      this.callo = call;
+      this.callons = callon;
       this.oras = ora;
       this.schermo = screen;
       this.callschermo = callscreen;
@@ -69,9 +77,10 @@ interface Chiamata {
       this.numeroDigitato = this.numeroDigitato.slice(0, -1);
     }
     public registro(): void {
-      let call: any = document.getElementById("call" + this.modello);
+
+      
       let register: any = document.getElementById("register" + this.modello);
-      call.classList.toggle("displaynone");
+      this.callo.classList.toggle("displaynone");
       register.classList.toggle("displaynone");
     }
     public resetregistro(): void {
@@ -130,10 +139,10 @@ interface Chiamata {
           } else {
             this.callschermo.innerText = "+"+this.numeroDigitato;
           }
-          let call: any = document.getElementById("call" + this.modello);
-          let callon: any = document.getElementById("callon" + this.modello);
-          call.classList.add("displaynone");
-          callon.classList.remove("displaynone");
+          
+          
+          this.callo.classList.add("displaynone");
+          this.callons.classList.remove("displaynone");
           let salv: string = this.numeroDigitato;
           this.timer(salv);
       }
@@ -167,9 +176,9 @@ interface Chiamata {
           this.oras.innerText = this.ore + ":";
         }
         if (this.ore == 1) {
-          let ore: any = document.getElementById("ora" + this.modello);
+        
   
-          ore.classList.remove("displaynone");
+          this.oras.classList.remove("displaynone");
         }
   
         if (this.credito <= 0 && this.scatto == false) {
@@ -182,10 +191,10 @@ interface Chiamata {
     }
   
     private chiudi() {
-      let callon: any = document.getElementById("callon" + this.modello);
-      callon.classList.add("displaynone");
-      let call: any = document.getElementById("call" + this.modello);
-      call.classList.remove("displaynone");
+
+
+      this.callons.classList.add("displaynone");
+      this.callo.classList.remove("displaynone");
   
       clearInterval(this.interval);
   
