@@ -41,7 +41,12 @@ var Smartphone = /** @class */ (function () {
         configurable: true
     });
     Smartphone.prototype.digitNumber = function (num) {
-        this.numeroDigitato = this._numeroDigitato + num;
+        if (this.numeroDigitato.length >= 12) {
+            this.numeroDigitato = this.numeroDigitato.slice(0, -1);
+        }
+        else {
+            this.numeroDigitato = this._numeroDigitato + num;
+        }
     };
     Smartphone.prototype.erasenumer = function () {
         this.numeroDigitato = this.numeroDigitato.slice(0, -1);
@@ -90,6 +95,11 @@ var Smartphone = /** @class */ (function () {
                     return;
                 }
                 else if (this.numeroDigitato.length < 10) {
+                    this.numeroDigitato = "";
+                    this.schermo.innerText = "Numero non Valido!";
+                    return;
+                }
+                else if (this.numeroDigitato.length > 12) {
                     this.numeroDigitato = "";
                     this.schermo.innerText = "Numero non Valido!";
                     return;

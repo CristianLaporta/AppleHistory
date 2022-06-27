@@ -59,7 +59,11 @@ interface Chiamata {
     }
   
     public digitNumber(num: string): void {
+      if (this.numeroDigitato.length >= 12){
+        this.numeroDigitato = this.numeroDigitato.slice(0, -1);
+      }else{
       this.numeroDigitato = this._numeroDigitato + num;
+      }
     }
     public erasenumer(): void {
       this.numeroDigitato = this.numeroDigitato.slice(0, -1);
@@ -111,6 +115,11 @@ interface Chiamata {
   
             return;
           } else if (this.numeroDigitato.length < 10) {
+            this.numeroDigitato = "";
+            this.schermo.innerText = "Numero non Valido!";
+  
+            return;
+          } else if (this.numeroDigitato.length > 12) {
             this.numeroDigitato = "";
             this.schermo.innerText = "Numero non Valido!";
   

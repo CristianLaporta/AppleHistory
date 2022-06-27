@@ -112,6 +112,7 @@ p {
 
 #chiamatesiphone, #chiamatesiphoneb, #chiamatesiphonec {
   position: absolute;
+  width: 270px;
   height: 228px;
   overflow: auto;
 }

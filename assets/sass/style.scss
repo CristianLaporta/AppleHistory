@@ -2,6 +2,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	background-color: rgb(213, 213, 213);
+
 }
 #phone {
 	background: url(../img/ios.png) no-repeat 30px top;
@@ -93,6 +94,7 @@ p {
 }
 #chiamatesiphone,#chiamatesiphoneb, #chiamatesiphonec{
 	position: absolute;
+	width: 270px;
 	height: 228px;
 	overflow: auto;
 }
