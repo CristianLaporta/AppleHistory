@@ -144,7 +144,12 @@ interface Chiamata {
           this.secondi = 0;
           this.minuti = this.minuti + 1;
           this.credito = this.credito - this.costoPerMinuto;
+      
           this.scatto = false;
+        }
+        if ( this.credito < 0){
+          this.credito = 0;
+          this.chiudi();
         }
         if (this.minuti > 59) {
           this.secondi = 0;

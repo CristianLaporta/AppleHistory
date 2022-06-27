@@ -125,6 +125,10 @@ var Smartphone = /** @class */ (function () {
                 _this.credito = _this.credito - _this.costoPerMinuto;
                 _this.scatto = false;
             }
+            if (_this.credito < 0) {
+                _this.credito = 0;
+                _this.chiudi();
+            }
             if (_this.minuti > 59) {
                 _this.secondi = 0;
                 _this.minuti = 0;
