@@ -26,6 +26,7 @@ interface Chiamata {
     public scatto: boolean = false;
     public chiamate: Chiamata[] = [];
     public setintervals: string = "";
+    public interval: number = 0;
     private _numeroDigitato: string = "";
     public get numeroDigitato(): string {
       return this._numeroDigitato;
@@ -39,7 +40,6 @@ interface Chiamata {
       modello: string,
       credito: number,
       costoPerMinuto: number,
-      setintervals: string
     ) {
       let screen = document.getElementById("screen" + modello);
       if (!screen) throw Error("Errore: non riesco a trovare lo schermo!");
@@ -55,7 +55,6 @@ interface Chiamata {
       this.callschermo = callscreen;
       this.credito = credito;
       this.costoPerMinuto = costoPerMinuto;
-      this.setintervals = setintervals;
       this.modello = modello;
     }
   
@@ -140,6 +139,7 @@ interface Chiamata {
           this.secondi = this.secondi + 1;
           // TODO: risolto
           this.timers.innerText = this.minuti + ":" + this.secondi;
+          this.interval = interval;
         } else {
           this.secondi = 0;
           this.minuti = this.minuti + 1;
@@ -162,18 +162,18 @@ interface Chiamata {
           this.credito = 0;
           this.setintervals = salv;
           this.scatto = true;
-          this.chiudi(interval);
+          this.chiudi();
         }
       }, 1000);
     }
   
-    private chiudi(interval) {
+    private chiudi() {
       let callon: any = document.getElementById("callon" + this.modello);
       callon.classList.add("displaynone");
       let call: any = document.getElementById("call" + this.modello);
       call.classList.remove("displaynone");
   
-      clearInterval(interval);
+      clearInterval(this.interval);
   
       this.chiamate.push({
         numero: this.numeroDigitato,
@@ -192,9 +192,15 @@ interface Chiamata {
       this.ultimechiamate();
     }
     private ultimechiamate() {
-      var lista = document.getElementById(
+      let div = document.getElementById(
         "chiamates" + this.modello
       ) as HTMLDivElement;
+      div.innerHTML = "";
+    
+      let lista = document.getElementById(
+        "chiamates" + this.modello
+      ) as HTMLDivElement;
+
       this.chiamate.forEach(function (prod) {
         var div = document.createElement("div");
   
@@ -220,7 +226,7 @@ interface Chiamata {
     }
   }
   
-  let iphone = new Smartphone("iphone", 1, 1, "");
-  let iphoneb = new Smartphone("iphoneb", 2, 2, "");
-  let iphonec = new Smartphone("iphonec", 3, 3, "");
+  let iphone = new Smartphone("iphone", 1, 1);
+  let iphoneb = new Smartphone("iphoneb", 2, 2);
+  let iphonec = new Smartphone("iphonec", 3, 3);
   

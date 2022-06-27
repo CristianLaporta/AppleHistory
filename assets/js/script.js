@@ -1,12 +1,13 @@
 // Per compilare : tsc -t es5 script.ts
 var Smartphone = /** @class */ (function () {
-    function Smartphone(modello, credito, costoPerMinuto, setintervals) {
+    function Smartphone(modello, credito, costoPerMinuto) {
         this.minuti = 0;
         this.secondi = 0;
         this.ore = 0;
         this.scatto = false;
         this.chiamate = [];
         this.setintervals = "";
+        this.interval = 0;
         this._numeroDigitato = "";
         var screen = document.getElementById("screen" + modello);
         if (!screen)
@@ -26,7 +27,6 @@ var Smartphone = /** @class */ (function () {
         this.callschermo = callscreen;
         this.credito = credito;
         this.costoPerMinuto = costoPerMinuto;
-        this.setintervals = setintervals;
         this.modello = modello;
     }
     Object.defineProperty(Smartphone.prototype, "numeroDigitato", {
@@ -117,6 +117,7 @@ var Smartphone = /** @class */ (function () {
                 _this.secondi = _this.secondi + 1;
                 // TODO: risolto
                 _this.timers.innerText = _this.minuti + ":" + _this.secondi;
+                _this.interval = interval;
             }
             else {
                 _this.secondi = 0;
@@ -138,16 +139,16 @@ var Smartphone = /** @class */ (function () {
                 _this.credito = 0;
                 _this.setintervals = salv;
                 _this.scatto = true;
-                _this.chiudi(interval);
+                _this.chiudi();
             }
         }, 1000);
     };
-    Smartphone.prototype.chiudi = function (interval) {
+    Smartphone.prototype.chiudi = function () {
         var callon = document.getElementById("callon" + this.modello);
         callon.classList.add("displaynone");
         var call = document.getElementById("call" + this.modello);
         call.classList.remove("displaynone");
-        clearInterval(interval);
+        clearInterval(this.interval);
         this.chiamate.push({
             numero: this.numeroDigitato,
             ore: this.ore,
@@ -164,6 +165,8 @@ var Smartphone = /** @class */ (function () {
         this.ultimechiamate();
     };
     Smartphone.prototype.ultimechiamate = function () {
+        var div = document.getElementById("chiamates" + this.modello);
+        div.innerHTML = "";
         var lista = document.getElementById("chiamates" + this.modello);
         this.chiamate.forEach(function (prod) {
             var div = document.createElement("div");
@@ -189,6 +192,6 @@ var Smartphone = /** @class */ (function () {
     };
     return Smartphone;
 }());
-var iphone = new Smartphone("iphone", 1, 1, "");
-var iphoneb = new Smartphone("iphoneb", 2, 2, "");
-var iphonec = new Smartphone("iphonec", 3, 3, "");
+var iphone = new Smartphone("iphone", 1, 1);
+var iphoneb = new Smartphone("iphoneb", 2, 2);
+var iphonec = new Smartphone("iphonec", 3, 3);
