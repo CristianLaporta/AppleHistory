@@ -20,6 +20,7 @@ interface Chiamata {
     public ultimechiam: HTMLElement;
     public timers: HTMLElement;
     public oras: HTMLElement;
+    public registers: HTMLElement;
     public credito: number;
     public costoPerMinuto: number;
     public minuti: number = 0;
@@ -55,6 +56,8 @@ interface Chiamata {
       if (!call) throw Error("Errore: non riesco a trovare call!");
       let callon = document.getElementById("callon" + modello);
       if (!callon) throw Error("Errore: non riesco a trovare callon!");
+      let register = document.getElementById("register" + this.modello);
+      if (!register) throw Error("Errore: non riesco a trovare register!");
       this.timers = timer;
       this.callo = call;
       this.callons = callon;
@@ -64,6 +67,7 @@ interface Chiamata {
       this.credito = credito;
       this.costoPerMinuto = costoPerMinuto;
       this.modello = modello;
+      this.registers = register;
     }
   
     public digitNumber(num: string): void {
@@ -77,11 +81,9 @@ interface Chiamata {
       this.numeroDigitato = this.numeroDigitato.slice(0, -1);
     }
     public registro(): void {
-
       
-      let register: any = document.getElementById("register" + this.modello);
       this.callo.classList.toggle("displaynone");
-      register.classList.toggle("displaynone");
+      this.registers.classList.toggle("displaynone");
     }
     public resetregistro(): void {
       this.chiamate = [];
