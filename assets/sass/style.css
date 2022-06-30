@@ -135,6 +135,7 @@ h5 {
   top: 350px;
   left: 900px;
   width: 500px;
+  text-shadow: 2px 2px #e0e0e0;
 }
 
 #absolute2 {
@@ -143,6 +144,7 @@ h5 {
   top: 1350px;
   left: 900px;
   width: 500px;
+  text-shadow: 2px 2px #e0e0e0;
 }
 
 #absolute3 {
@@ -151,5 +153,6 @@ h5 {
   top: 2200px;
   left: 900px;
   width: 500px;
+  text-shadow: 2px 2px #e0e0e0;
 }
 /*# sourceMappingURL=style.css.map */
